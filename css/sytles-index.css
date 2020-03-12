@@ -30,7 +30,8 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  position: fixed;
+  position: fixed; /*You will see the effect after the page has more than a 100vh 
+section, so that you can scroll*/
 }
 nav {
 }
