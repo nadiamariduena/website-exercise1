@@ -1,0 +1,160 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-greyshh: #eee;
+  --main-orange: orange;
+}
+
+body {
+  background-color: darkgoldenrod;
+  font-family: "Cutive Mono", monospace;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* -------------------- */
+
+header {
+  background-color: transparent;
+  min-height: 3vh;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+}
+nav {
+}
+ul {
+  list-style: none;
+}
+li {
+  display: inline-block;
+  margin: 0 20px;
+  color: white;
+  font-size: 0.7em;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #aaa;
+  text-decoration: none;
+}
+.logo {
+  background-color: transparent;
+  margin: 0 0 0 10px;
+  color: white;
+  font-family: "Raleway-ExtraBold", sans-serif;
+  font-size: 0.8em;
+  letter-spacing: 3px;
+}
+/* -------------------- */
+
+#page {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+/* -------banner-slider------------- */
+#slider {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 70vh;
+  animation: slide 20s ease infinite;
+
+  /* width: 100vw;
+  height: 70vh; */
+
+  /* background: var(--main-orange)
+    url(../images/Claudio_Mirrored_XVIII_Scanned_Updated_All.jpg); */
+  background: var(--main-orange);
+  background-blend-mode: difference;
+}
+
+.content-banner {
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.load {
+  animation: slide 2s;
+}
+@keyframes slide {
+  0% {
+    background-image: url(../images/Claudio_Mirrored_XVIII_Scanned_Updated_All.jpg);
+  }
+
+  50% {
+    background-image: url(../images/Li.jpg);
+  }
+  100% {
+    background-image: url(../images/SuzanneSaroff_metalmagazine_17.jpg);
+  }
+}
+
+/* If i do it in this way, using only 1 image and not two of the same,
+somehow the transition works in a unexpected way. */
+/* --------------------- */
+
+#texto {
+  width: 100vw;
+  height: 30vh;
+
+  display: flex;
+
+  background-color: white;
+}
+
+.box1 {
+  flex-basis: 1;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #fff;
+}
+.box1 p:nth-child(odd) {
+  font-size: 7em;
+  padding: 0 20px;
+  color: #000;
+}
+.box1 p:nth-child(even) {
+  color: #000;
+  font-size: 1em;
+  padding: 0 40px;
+  letter-spacing: 2px;
+  font-style: italic;
+}
+
+.box2 {
+  flex-basis: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+.box2 p {
+  color: #282828;
+  font-size: 1em;
+  padding: 0 30px;
+  letter-spacing: 20px;
+  line-height: 25px;
+}
+
+/* i tried making it with h1.box1 and p.box2 and i realized that it s not balanced
+due to the h1 weight of font, it also wont work in a correct way if i use divs instead
+of h1.box1 and p.box2 and that is due to the amount of words in each box */
