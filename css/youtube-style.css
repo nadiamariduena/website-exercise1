@@ -94,7 +94,12 @@ li {
 
 /* ------------------------- */
 #gallery-boxes {
-  width: 30%;
+  width: 30%; 
+/*Depends of the box of the container, if it was the whole box i would say i want it to: 
+33,33+33,33+33,33 , which means 3 boxes that will adjust to 99,99 of the space of the container(100%)..that without 
+calculating the margins in between them, so if i want margins, i would add 31% to each depending of the margin size. but if i really really
+want it precise i need more maths*/
+
   height: 230px;
   margin: 5px;
 
