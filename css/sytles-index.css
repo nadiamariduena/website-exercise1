@@ -34,6 +34,8 @@ header {
 section, so that you can scroll*/
 }
 nav {
+/*you can add the content of the header here , in case the logo class was inside the nav, also you can add
+more settings to this section if you want more height or extra styles*/
 }
 ul {
   list-style: none;
